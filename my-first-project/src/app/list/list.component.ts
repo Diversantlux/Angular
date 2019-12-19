@@ -33,23 +33,23 @@ export class ListComponent implements OnInit {
   }
 
 //сортировка(P.s кнопки еще нет)
-  const foo = function(products) {
-
-    let result = products.slice(0, products.lenght);
-
-    for (var i = 0, endI = result.length -1; i < endI; i++) {
-      for (var j = 0, endJ = endI - i; j < endJ; j++ ) {
-        if (result[j].price > result[j +1].price) {
-          const swap = result[j];
-          result[j] = result[j +1];
-          result[j +1] = swap;
-
-        }
-      }
-    }
-    return result;
-  }
-  foo(products);
+//   const foo = function(products) {
+//
+//     let result = products.slice(0, products.lenght);
+//
+//     for (var i = 0, endI = result.length -1; i < endI; i++) {
+//       for (var j = 0, endJ = endI - i; j < endJ; j++ ) {
+//         if (result[j].price > result[j +1].price) {
+//           const swap = result[j];
+//           result[j] = result[j +1];
+//           result[j +1] = swap;
+//
+//         }
+//       }
+//     }
+//     return result;
+//   }
+//   foo(products);
 
   constructor() { }
 

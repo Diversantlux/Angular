@@ -7,12 +7,14 @@ import { ListComponent } from './list/list.component';
 import {RouterModule} from '@angular/router';
 import {ReactiveFormsModule} from '@angular/forms';
 import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
+import { CategoryComponent } from './category/category.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
-    ProductAlertsComponent
+    ProductAlertsComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
