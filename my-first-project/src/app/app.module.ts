@@ -3,25 +3,29 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListComponent } from './list/list.component';
 import {RouterModule} from '@angular/router';
 import {ReactiveFormsModule} from '@angular/forms';
-import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 import { CategoryComponent } from './category/category.component';
+import { CategoryListPageComponent } from './category/category-list-page/category-list-page.component';
+import { CategoryPageComponent } from './category/category-page/category-page.component';
+import { ProductsListPageComponent } from './products/products-list-page/products-list-page.component';
+import { ProductsPageComponent } from './products/products-page/products-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent,
-    ProductAlertsComponent,
-    CategoryComponent
+    CategoryComponent,
+    CategoryListPageComponent,
+    CategoryPageComponent,
+    ProductsListPageComponent,
+    ProductsPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: ListComponent },
+      { path: '', component: CategoryComponent },
     ])
   ],
   providers: [],

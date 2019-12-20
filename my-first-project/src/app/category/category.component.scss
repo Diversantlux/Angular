@@ -1,0 +1,18 @@
+h2 {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.technic {
+  display: block;
+  background-color: aquamarine;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+}
