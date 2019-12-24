@@ -5,28 +5,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {RouterModule} from '@angular/router';
 import {ReactiveFormsModule} from '@angular/forms';
-import { CategoryComponent } from './category/category.component';
-import { CategoryListPageComponent } from './category/category-list-page/category-list-page.component';
-import { CategoryPageComponent } from './category/category-page/category-page.component';
+import { CategoryListPageComponent } from './categories/category-list-page/category-list-page.component';
+import { CategoryPageComponent } from './categories/category-page/category-page.component';
 import { ProductsListPageComponent } from './products/products-list-page/products-list-page.component';
 import { ProductsPageComponent } from './products/products-page/products-page.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    CategoryComponent,
     CategoryListPageComponent,
     CategoryPageComponent,
     ProductsListPageComponent,
-    ProductsPageComponent
+    ProductsPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: CategoryComponent },
-    ])
+      { path: 'categories', component: CategoryListPageComponent }, { path: 'categories/:id', component: CategoryPageComponent },
+      {path: '', redirectTo: 'categories', pathMatch: 'full'},
+      { path: 'products', component: ProductsListPageComponent }, { path: 'products/:id', component: ProductsPageComponent}] )
   ],
   providers: [],
   bootstrap: [AppComponent]
