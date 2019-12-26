@@ -24,9 +24,11 @@ import { ProductsPageComponent } from './products/products-page/products-page.co
     AppRoutingModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: 'categories', component: CategoryListPageComponent }, { path: 'categories/:id', component: CategoryPageComponent },
       {path: '', redirectTo: 'categories', pathMatch: 'full'},
-      { path: 'products', component: ProductsListPageComponent }, { path: 'products/:id', component: ProductsPageComponent}] )
+      { path: 'categories', component: CategoryListPageComponent },
+      { path: 'categories/:categoryId', component: CategoryPageComponent },
+      { path: 'categories/:categoryId/products', component: ProductsListPageComponent },
+      { path: 'products/:productId', component: ProductsPageComponent}] )
   ],
   providers: [],
   bootstrap: [AppComponent]

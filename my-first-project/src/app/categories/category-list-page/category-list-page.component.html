@@ -1,8 +1,11 @@
 <h2>Категории</h2>
 <div class="container">
-<div class="technic"><p class="text">Телевизоры</p></div>
 
-<div  class="technic"><p class="text">Телефоны</p></div>
+<div *ngFor="let category of categories[1]" [routerLink]="category.id"  class="technic"><p class="text"><img src="{{category.img}}" class="technic">{{category.name}}</p>
 
-<div class="technic"><p class="text">Ноутбуки</p></div>
+</div>
+
+<div *ngFor="let category of categories[2]" [routerLink]="category.id" class="technic"><p class="text"><img src="{{category.img}}" class="technic">{{category.name}}</p></div>
+
+<div *ngFor="let category of categories[3]" [routerLink]="category.id" class="technic"><p class="text"><img src="{{category.img}}" class="technic">{{category.name}}</p></div>
 </div>
