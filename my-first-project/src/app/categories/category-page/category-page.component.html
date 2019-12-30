@@ -1,5 +1,8 @@
 <!--<p>Здесь должна быть инфа о телеках и кнопка перехода на всех телеки в этой категории</p>-->
-<div *ngFor="let category of categoriesPage[1]"   class="technic"><p class="text"><img src="{{category.img}}" class="technic">{{category.description}}
-  <button >{{category.button}}</button></p>
+<div   class="technic"><p class="text">
+
+  <img [src]="category.img" class="technic"/>{{category.description}}
+  <button routerLink="products">Кнопка{{category.button}}</button></p>
 
 </div>
+

@@ -9,5 +9,5 @@ import {CategoriesService} from '../../categories.service';
 export class CategoryListPageComponent {
 
   constructor(private categoriesService: CategoriesService) { }
-  categories = this.categoriesService.categories;
+  categories = Object.entries(this.categoriesService.categories);
 }

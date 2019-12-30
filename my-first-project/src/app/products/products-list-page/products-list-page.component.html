@@ -1,3 +1,6 @@
 <div *ngFor="let product of products"  class="container">
-  {{product | json}}
+  <div class="technic">
+  <img src="{{product.img}}">
+  <p class="text">{{product.description}}</p>
+  </div>
   </div>

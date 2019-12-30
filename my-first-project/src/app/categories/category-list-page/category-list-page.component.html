@@ -1,11 +1,12 @@
 <h2>Категории</h2>
 <div class="container">
 
-<div *ngFor="let category of categories[1]" [routerLink]="category.id"  class="technic"><p class="text"><img src="{{category.img}}" class="technic">{{category.name}}</p>
+<div *ngFor="let category of categories" [routerLink]="category[1].id"  class="technic">
+  <p class="text"><img src="{{category[1].img}}" class="technic">{{category[1].name}}</p>
 
 </div>
 
-<div *ngFor="let category of categories[2]" [routerLink]="category.id" class="technic"><p class="text"><img src="{{category.img}}" class="technic">{{category.name}}</p></div>
+<!--<div *ngFor="let category of categories[2]" [routerLink]="category.id" class="technic"><p class="text"><img src="{{category.img}}" class="technic">{{category.name}}</p></div>-->
 
-<div *ngFor="let category of categories[3]" [routerLink]="category.id" class="technic"><p class="text"><img src="{{category.img}}" class="technic">{{category.name}}</p></div>
+<!--<div *ngFor="let category of categories[3]" [routerLink]="category.id" class="technic"><p class="text"><img src="{{category.img}}" class="technic">{{category.name}}</p></div>-->
 </div>
