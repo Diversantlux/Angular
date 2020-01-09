@@ -28,7 +28,7 @@ import { ProductsPageComponent } from './products/products-page/products-page.co
       { path: 'categories', component: CategoryListPageComponent },
       { path: 'categories/:categoryId', component: CategoryPageComponent },
       { path: 'categories/:categoryId/products', component: ProductsListPageComponent },
-      { path: 'products/:productId', component: ProductsPageComponent}] )
+      { path: 'categories/:categoryId/products/:productId', component: ProductsPageComponent}] )
   ],
   providers: [],
   bootstrap: [AppComponent]

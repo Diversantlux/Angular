@@ -1,6 +1,6 @@
-<div *ngFor="let product of products"  class="container">
+<div *ngFor="let product of products" [routerLink]="product.id" class="container">
   <div class="technic">
-  <img src="{{product.img}}">
+  <img src="{{product.img}}" class="technic-img">
   <p class="text">{{product.description}}</p>
   </div>
   </div>

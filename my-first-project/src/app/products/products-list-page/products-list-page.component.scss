@@ -12,11 +12,12 @@ button {
 
 .technic {
   display: block;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 150px;
-  height: 150px;
   text-align: center;
   margin: 0 auto;
+  cursor: pointer;
 
+}
+.technic-img {
+  width: 150px;
+  height: 150px;
 }
