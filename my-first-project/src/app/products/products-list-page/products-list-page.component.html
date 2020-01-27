@@ -1,7 +1,7 @@
-<input type="text" (change)="filter($event.target.value)">
-<button type="submit" (change)="filter()">Поиск</button>
+<!--<input type="text" (change)="filter($event.target.value)">-->
+<!--<button type="button" onclick="filter()">Поиск</button>-->
 
-<br><button >Сортировка</button>
+<br><button type="button" (click)="aaa()">Сортировка</button>
 <div *ngFor="let product of products" [routerLink]="product.id" class="container">
   <div class="technic">
   <img src="{{product.img}}" class="technic-img">

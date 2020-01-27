@@ -10,26 +10,14 @@ import {ActivatedRoute} from '@angular/router';
 export class ProductsListPageComponent {
   categoryId = this.ac.snapshot.params.categoryId;
   products = this.productsService.products[this.categoryId];
+  aaa() { this.productsService.sort(this.categoryId, 'description');
+  this.products =
+   //this.products = ; мне надо - результат который вернет функция sort в this.proucts
+  }
   constructor(private productsService: ProductsService, private ac: ActivatedRoute) { }
 
 
-  //  const foo = function(products) {
-  //
-  //   let result = products.slice(0, products.lenght);
-  //
-  //   for (var i = 0, endI = result.length -1; i < endI; i++) {
-  //     for (var j = 0, endJ = endI - i; j < endJ; j++ ) {
-  //       if (result[j].price > result[j +1].price) {
-  //         const swap = result[j];
-  //         result[j] = result[j +1];
-  //         result[j +1] = swap;
-  //
-  //       }
-  //     }
-  //   }
-  //   return result;
-  // }
-  // foo(products);
+
 
   // products = products;
   // filter(query) {
@@ -44,7 +32,7 @@ export class ProductsListPageComponent {
   //
   //     }
   //   } else {
-  //     result = products;
+  //     result = this.products;
   //   }
   //   this.products = result;
   // }

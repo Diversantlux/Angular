@@ -4,32 +4,33 @@ import {Injectable} from '@angular/core';
   providedIn: 'root'
 })
 export class ProductsService {
+
   products = {
     1: [{
       name: 'Телек 1',
       id: '10',
-      description: 'Телевизор Samsung 4k 65 display QLED ',
+      description: 'Телевизор Samsung 4k 65 display QLED 111111222222222222222222222222222222222222222222222222222222222222222',
       price: 200000,
       img: 'https://im0-tub-ru.yandex.net/i?id=584b635be5debfdb8f47ba6965c94b74&n=13'
     },
       {
         name: 'Телек 2',
         id: '11',
-        description: 'Телевизор LG 4k 65 display OLED',
+        description: 'Телевизор LG 4k 65 display OLED  1111111111111',
         price: 2500000,
         img: 'https://www.electronicempire.co.uk/images/u_10180149.jpg'
       },
       {
         name: 'Телек 3',
         id: '12',
-        description: 'Телевизор Samsung 4k 77 display ',
+        description: 'Телевизор Samsung 4k 77 display 1111111111111111111111111',
         price: 150000,
         img: 'https://im0-tub-ru.yandex.net/i?id=8e55e9c0c8bc98619e4a90e9b4897752&n=13'
       },
       {
         name: 'Телек 4',
         id: '13',
-        description: 'Телевизор LG 4k 65 display OLED 77 ',
+        description: 'Телевизор LG 4k 65 display OLED 77 111111111111111111111111111111111111111',
         price: 300000,
         img: 'https://www.technocity.ru/upload/iblock/56c/z0000127782-01.jpg'
       }],
@@ -81,7 +82,42 @@ export class ProductsService {
         description: 'Мощный Игровой Ноутбук OMEN',
         img: 'http://www.sagmart.com/uploads/2017/08/23/news_image1/hp-omen-x-front.jpg'
       }]
+  };
+
+  sort(categoryId, sortField) {
+   const products = this.products[categoryId];
+    const sortValue = products[0][sortField];
+    const result = products.slice(0, products.lenght);
+    for (var i = 0, endI = result.length -1; i < endI; i++) {
+      for (var j = 0, endJ = endI - i; j < endJ; j++ ) {
+        if (result[j][sortField] > result[j +1][sortField]) {
+          const swap = result[j];
+          result[j] = result[j +1];
+          result[j +1] = swap;
+
+        }
+      }
+    }
+    return result;
   }
+
+  //  const foo = function(products) {
+  //
+  //   const result = products.slice(0, products.lenght);
+  //
+  //   for (var i = 0, endI = result.length -1; i < endI; i++) {
+  //     for (var j = 0, endJ = endI - i; j < endJ; j++ ) {
+  //       if (result[j].categoryId > result[j +1].categoryId) {
+  //         const swap = result[j];
+  //         result[j] = result[j +1];
+  //         result[j +1] = swap;
+  //
+  //       }
+  //     }
+  //   }
+  //   return result;
+  // }
+  // foo(products);
 
   constructor() {
   }
