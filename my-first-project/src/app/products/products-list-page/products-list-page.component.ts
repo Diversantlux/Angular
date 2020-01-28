@@ -11,7 +11,8 @@ export class ProductsListPageComponent {
   categoryId = this.ac.snapshot.params.categoryId;
   products = this.productsService.products[this.categoryId];
   aaa() { this.productsService.sort(this.categoryId, 'description');
-  this.products =
+  this.products = this.productsService.sort(this.categoryId, 'description');
+
    //this.products = ; мне надо - результат который вернет функция sort в this.proucts
   }
   constructor(private productsService: ProductsService, private ac: ActivatedRoute) { }
